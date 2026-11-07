@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1020;
+    color: white;
+}
+
+.navbar {
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: #151f35;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 15px;
+}
+
+.navbar a:hover {
+    color: #62b5ff;
+}
+
+.home {
+    min-height: 85vh;
+    padding: 60px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.home-content {
+    max-width: 550px;
+}
+
+.tag {
+    color: #62b5ff;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.home h1 {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+.home h1 span {
+    color: #62b5ff;
+}
+
+.home-content p {
+    color: #b8c1d1;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.student-info {
+    margin: 25px 0;
+}
+
+.student-info p {
+    margin-bottom: 8px;
+}
+
+.main-button {
+    display: inline-block;
+    background: #398bfa;
+    color: white;
+    padding: 13px 25px;
+    text-decoration: none;
+    border-radius: 7px;
+    margin-top: 10px;
+}
+
+.main-button:hover {
+    background: #62b5ff;
+}
+
+.home-image {
+    width: 45%;
+    max-width: 500px;
+}
+
+.home-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid #398bfa;
+    box-shadow: 0 0 30px rgba(57, 139, 250, 0.25);
+}
+
+.programs-section {
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.programs-section h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #aaa;
+    margin-bottom: 35px;
+}
+
+.program-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.program-card {
+    background: #151f35;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: left;
+    border: 1px solid #34415c;
+    transition: 0.3s;
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+    border-color: #398bfa;
+}
+
+.program-number {
+    color: #62b5ff;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.program-card p {
+    color: #aaa;
+    line-height: 1.6;
+    min-height: 50px;
+    margin-top: 15px;
+}
+
+.view-code {
+    width: 100%;
+    padding: 11px;
+    margin-top: 15px;
+    background: #398bfa;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.view-code:hover {
+    background: #62b5ff;
+}
+
+.image-viewer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 30px;
+}
+
+.full-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.full-images img {
+    max-width: 48%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+    background: #151f35;
+    margin-top: 30px;
+}
+
+@media (max-width: 900px) {
+
+    .home {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .home-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .program-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .navbar a {
+        margin: 0 10px;
+    }
+
+    .home h1 {
+        font-size: 35px;
+    }
+
+    .home-image img {
+        height: 280px;
+    }
+
+    .program-container {
+        grid-template-columns: 1fr;
+    }
+
+    .full-images {
+        flex-direction: column;
+    }
+
+    .full-images img {
+        max-width: 95%;
+        max-height: 42vh;
+    }
+
+}

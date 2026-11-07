@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Programs</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="programs.html">Programs</a>
+        </div>
+
+    </nav>
+
+    <section class="programs-section">
+
+        <h1>My Web Technology Lab Programs</h1>
+        <br><br>
+        <div class="program-container">
+
+            <div class="program-card">
+                <span class="program-number">PROGRAM 01</span>
+                <p>Design a paragraph about MCA course.</p>
+
+                <button class="view-code"
+                onclick="openImages('images/01.jpeg','images/01(1).jpeg')">
+                    View Code
+                </button>
+            </div>
+
+            <div class="program-card">
+                <span class="program-number">PROGRAM 02</span>
+                <p>Design a webpage with background image.</p>
+
+                <button class="view-code"
+                onclick="openImages('images/02.jpeg','images/02(1).jpeg')">
+                    View Code
+                </button>
+            </div>
+
+            <div class="program-card">
+                <span class="program-number">PROGRAM 03</span>
+                <p>Design a webpage of unordered and ordered list of different items.</p>
+
+                <button class="view-code"
+                onclick="openImages('images/03.jpeg','images/03(1).jpeg')">
+                    View Code
+                </button>
+            </div>
+
+            <div class="program-card">
+                <span class="program-number">PROGRAM 04</span>
+                <p>Design a webpage with a Menu and a Nested Menu with ordered and unordered lists.</p>
+
+                <button class="view-code"
+                onclick="openImages('images/04.jpeg','images/04(1).jpeg')">
+                    View Code
+                </button>
+            </div>
+
+            <div class="program-card">
+                <span class="program-number">PROGRAM 05</span>
+                <p>Design a webpage with different schools of the PU.</p>
+
+                <button class="view-code"
+                onclick="openImages('images/05.jpeg','images/05(1).jpeg')">
+                    View Code
+                </button>
+            </div>
+
+            <div class="program-card">
+                <span class="program-number">PROGRAM 06</span>
+                <p>Design a webpage to demonstrate the various courses of PU and link those courses using a table and link tags.</p>
+
+                <button class="view-code"
+                onclick="openImages('images/06.jpeg','images/06(1).jpeg','images/06(2).jpeg')">
+                    View Code
+                </button>
+            </div>
+
+            <div class="program-card">
+                <span class="program-number">PROGRAM 07</span>
+                <p>Design a Resume page using table and image, with necessary information, photo and signature.</p>
+
+                <button class="view-code"
+                onclick="openImages('images/07.jpeg','images/07(1).jpeg','images/07(2).jpeg')">
+                    View Code
+                </button>
+            </div>
+
+            <div class="program-card">
+                <span class="program-number">PROGRAM 08</span>
+                <p>Create a nested form set.</p>
+
+                <button class="view-code"
+                onclick="openImages('images/08.jpeg')">
+                    View Code
+                </button>
+            </div>
+
+            <div class="program-card">
+                <span class="program-number">PROGRAM 09</span>
+                <p>Create a page using iframe.</p>
+
+                <button class="view-code"
+                onclick="openImages('images/09.jpeg')">
+                    View Code
+                </button>
+            </div>
+
+            <div class="program-card">
+                <span class="program-number">PROGRAM 10</span>
+                <p>Write a code to design a form.</p>
+
+                <button class="view-code"
+                onclick="openImages('images/10.jpeg','images/10(1).jpeg','images/10(2).jpeg')">
+                    View Code
+                </button>
+            </div>
+
+            <div class="program-card">
+                <span class="program-number">PROGRAM 11</span>
+                <p>Write an HTML code for inline, internal and external CSS.</p>
+
+                <button class="view-code"
+                onclick="openImages('images/11.jpeg','images/11(1).jpeg')">
+                    View Code
+                </button>
+            </div>
+
+            <div class="program-card">
+                <span class="program-number">PROGRAM 12</span>
+                <p>Design a webpage to add information about the Marvel Universe.</p>
+
+                <button class="view-code"
+                onclick="openImages('images/12.jpeg','images/12(1).jpeg')">
+                    View Code
+                </button>
+            </div>
+
+            <div class="program-card">
+                <span class="program-number">PROGRAM 13</span>
+                <p>Design a document using HTML and external CSS using class selector to create an online shopping catalog.</p>
+
+                <button class="view-code"
+                onclick="openImages('images/13.jpeg','images/13(1).jpeg','images/13(2).jpeg','images/13(3).jpeg')">
+                    View Code
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div id="imageViewer" class="image-viewer"
+         onclick="closeImages()">
+
+        <span class="close-button"
+              onclick="closeImages()">
+            &times;
+        </span>
+
+        <div id="fullImages" class="full-images"
+             onclick="event.stopPropagation()">
+        </div>
+
+    </div>
+
+    <script>
+
+        function openImages(...images) {
+
+            let viewer = document.getElementById("imageViewer");
+
+            let fullImages = document.getElementById("fullImages");
+
+            fullImages.innerHTML = "";
+
+            images.forEach(function(image) {
+
+                let img = document.createElement("img");
+
+                img.src = image;
+
+                img.alt = "Program screenshot";
+
+                fullImages.appendChild(img);
+
+            });
+
+            viewer.style.display = "flex";
+
+        }
+
+
+        function closeImages() {
+
+            document.getElementById("imageViewer").style.display = "none";
+
+        }
+
+
+        document.addEventListener("keydown", function(event) {
+
+            if (event.key === "Escape") {
+                closeImages();
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
